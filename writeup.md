@@ -34,9 +34,11 @@ Find the Hough Lines of the image.
 
 Remove the Hough Lines that are sloped incorrectly, and find two lines that best approximates the Hough Lines. The longer the Hough Line, the higher weight it carries in the approximation.
 
-Apply the two fitting lines to the original image
+Apply the two fitting lines to the original image.
 
 <img src="test_images_output/final.jpg" alt="final" width="300" />
+
+To add these lines to a video is simple.  You simply treat each frame of the video as an image, and apply the above pipeline to it.
 
 #### 2. Shortcomings
 There are multiple glaring shortcomings, which include:
