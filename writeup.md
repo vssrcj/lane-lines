@@ -1,27 +1,31 @@
-# **Finding Lane Lines on the Road** 
+### **Finding Lane Lines on the Road** 
 
-## Writeup Template
+## Writeup
 
-### You can use this file as a template for your writeup if you want to submit it as a markdown file. But feel free to use some other method and submit a pdf if you prefer.
-
----
-
-**Finding Lane Lines on the Road**
-
-The goals / steps of this project are the following:
-* Make a pipeline that finds lane lines on the road
-* Reflect on your work in a written report
-
-
-[//]: # (Image References)
-
-[image1]: ./examples/grayscale.jpg "Grayscale"
+The purpose of this project is to take in a video stream and add lines to it that corresponds to the lines on the road
 
 ---
 
-### Reflection
+## Reflection
 
-### 1. Describe your pipeline. As part of the description, explain how you modified the draw_lines() function.
+#### 1. The pipeline
+
+The original image:
+
+1. I convert the image to grayscale
+![grayscale][https://github.com/vssrcj/lane-lines/test_images_output/grayscale.jpg]
+2. Blur the image using guassian blur.  This removes impurities that impeads edge detection.
+![blurred][https://github.com/vssrcj/lane-lines/test_images_output/blurred.jpg]
+3. Apply canny edge detection to the image.  This finds all the hard edges in the images.
+![canny][https://github.com/vssrcj/lane-lines/test_images_output/canny.jpg]
+4. Limit the image to the are that I'm interested in.
+![cropped][https://github.com/vssrcj/lane-lines/test_images_output/cropped.jpg]
+5. Find the Hough Lines of the image.
+![lined][https://github.com/vssrcj/lane-lines/test_images_output/lined.jpg]
+6. Remove the Hough Lines that are sloped incorrectly, and find two lines that best approximates the Hough Lines. The longer the Hough Line, the higher weight it carries in the approximation.
+7. Apply the two fitting lines to the original image
+![final][https://github.com/vssrcj/lane-lines/test_images_output/final.jpg]
+
 
 My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I .... 
 
