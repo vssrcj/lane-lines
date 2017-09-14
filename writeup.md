@@ -10,7 +10,7 @@ The purpose of this project is to take in a video stream and add lines to it tha
 
 The original image:
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/original.jpg" alt="original" width="300" />
+<img src="test_images_output/original.jpg" alt="original" width="300" />
 
 I convert the image to grayscale
 
