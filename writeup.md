@@ -14,29 +14,29 @@ The original image:
 
 I convert the image to grayscale
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/grayscale.jpg" alt="grayscale" width="300" />
+<img src="test_images_output/grayscale.jpg" alt="grayscale" width="300" />
 
 Blur the image using guassian blur.  This removes impurities that impeads edge detection.
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/blurred.jpg" alt="blurred" width="300" />
+<img src="test_images_output/blurred.jpg" alt="blurred" width="300" />
 
 Apply canny edge detection to the image.  This finds all the hard edges in the images.
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/canny.jpg" alt="canny" width="300" />
+<img src="test_images_output/canny.jpg" alt="canny" width="300" />
 
 Limit the image to the are that I'm interested in.
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/cropped.jpg" alt="cropped" width="300" />
+<img src="test_images_output/cropped.jpg" alt="cropped" width="300" />
 
 Find the Hough Lines of the image.
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/lined.jpg" alt="lined" width="300" />
+<img src="test_images_output/lined.jpg" alt="lined" width="300" />
 
 Remove the Hough Lines that are sloped incorrectly, and find two lines that best approximates the Hough Lines. The longer the Hough Line, the higher weight it carries in the approximation.
 
 Apply the two fitting lines to the original image
 
-<img src="https://github.com/vssrcj/lane-lines/blob/master/test_images_output/final.jpg" alt="final" width="300" />
+<img src="test_images_output/final.jpg" alt="final" width="300" />
 
 #### 2. Shortcomings
 There are multiple glaring shortcomings, which include:
